@@ -1,1 +1,1 @@
-console.log('you\'re piece of shit');````````````````````````````````````````````````````````````````````````````
+console.log('you\'re piece of shit');
