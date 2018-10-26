@@ -1,0 +1,458 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.primary-color {
+    background-color: #313131;
+}
+
+.secondary-color {
+    background-color: #313131;
+}
+
+.default {
+    background-color: rgb(32, 32, 32);
+
+}
+
+.alert {
+    background-color: #c60f13;
+}
+
+header {
+    background: url('../img/original/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    animation: slide-down 1s forwards;
+}
+header img {
+    margin: 20px;
+    margin-left: 40px;
+    width: 70px;
+    height: 70px;
+}
+header h1 {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoom-out 1s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main aside";
+    overflow-x: hidden;
+}
+.primary-color ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2em;
+    justify-items: center;
+}
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+    padding-top: 2em;
+}
+aside {
+    grid-area: aside;
+}
+aside p {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    animation: slide-left 1s forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+li {
+    list-style: none;
+}
+h3 {
+    display: inline-block;
+    position: absolute;
+    color: #dddddd;
+    top: 50%;
+    left: 50%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    z-index: 2;
+    transition: 0.4s;
+    text-align: center;
+    background: #3a3a3a;
+}
+h3::before {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s;
+}
+h3::after {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s;
+}
+figure, figure img, figure a::before, figure a::after {
+    width: 40px;
+    height: 400px;
+}
+figure {
+    position: relative;
+    margin: 0;   
+    overflow: hidden;
+    animation: slide-right 1s forwards;
+}
+figure a::before {
+    content: "";
+    background: linear-gradient(45deg, yellow, red);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+figure img {
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+figure a::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.103);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.4s;
+}
+figure:hover h3::before {
+    width: 350px;
+    bottom: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+figure:hover h3::after {
+    width: 350px;
+    bottom: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+figure:hover a::before {
+    opacity: 0.2;
+}
+figure:hover a::after {
+    opacity: 1;
+}
+figure:hover img {
+    transform: scale(1);
+}
+figure:hover h3 {
+    background: none;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: #313131;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(58, 58, 58); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27); 
+    border-radius: 10px;
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes zoom-out {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* @media only screen and (min-width: 35em) {
+    body {
+        max-width: 60em;
+        margin: auto;
+    }
+
+} */
+@media only screen and (max-width: 990px) {
+    body {
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside";
+    }
+    .primary-color ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1.5em;
+        justify-items: center;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    figure, figure img, figure a::before, figure a::after {
+        width: 320px;
+        height: 320px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside";
+    }
+    .primary-color ul {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        padding: 0 5em!important;
+    }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
