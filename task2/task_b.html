@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task B</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <h1>Form validation HTML5</h1>
+    <div class="form-button"><span>Contact Me</span><i class="fas fa-envelope"></i></div>
+
+    <form name="form" novalidate onsubmit="return validateForm();">
+        <div class="warning">This is warning</div>
+        <div class="half-width">
+            <div class="form-group">
+                <input type="text" name ="fname" class="fname" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <input type="text" name ="lname" class="lname" placeholder="Last name">
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="number" class="phone" placeholder="Phone number - ex: +358412345678">
+        </div>
+        <div class="address-postal">
+            <div class="form-group">
+                <input type="text" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <input type="number" class="postal" name="postal" placeholder="Postal code">
+            </div>
+        </div>
+        <div class="two-third">
+            <div class="form-group">
+                <input type="email" name="email" class="email" required placeholder="Email">
+            </div>
+            <div class="form-group">
+                    <input type="password" name="password" class="password" placeholder="Password">
+            </div>
+        </div>      
+        <div class="form-group">
+            <button type="submit" id="btn-submit">Submit</button>
+        </div>
+    </form>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>

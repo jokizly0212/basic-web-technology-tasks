@@ -177,7 +177,7 @@ h3::after {
     transition: 0.4s;
 }
 figure, figure img, figure a::before, figure a::after {
-    width: 40px;
+    width: 400px;
     height: 400px;
 }
 figure {
