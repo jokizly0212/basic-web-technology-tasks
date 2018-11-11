@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 6</title>
+</head>
+<body>
+    <ul class="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li data-foodtype="squishy">Orange</li>
+        <li>Pear</li>
+        <li>Kiwi</li>
+        <li id="berry">Strawberry</li>
+    </ul>
+
+    <script>
+        const strawberry = document.getElementById('berry');
+        console.log('I found the berry: ' + strawberry.innerHTML);
+        const orange = document.querySelector('[data-foodtype="squishy"]');
+        console.log('I found the fruit: ' + orange.innerHTML);
+        const HTMLcollection = document.getElementsByTagName('li');
+        console.log(HTMLcollection);
+        const fruits = document.querySelectorAll('li');
+        for(let i = 0; i < fruits.length; i++) {
+            fruits[i].style.listStyleType = 'none';
+            fruits[i].style.border = '1px solid black';
+            fruits[i].style.width = '100px';
+            fruits[2].style.backgroundColor = 'orange';
+            fruits[3].style.backgroundColor = 'lightGreen';
+            fruits[5].style.backgroundColor = '#fc5a8d';
+        }
+    </script>
+</body>
+</html>
