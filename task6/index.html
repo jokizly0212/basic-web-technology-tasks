@@ -26,12 +26,14 @@
         const fruits = document.querySelectorAll('li');
         for(let i = 0; i < fruits.length; i++) {
             fruits[i].style.listStyleType = 'none';
-            fruits[i].style.border = '1px solid black';
             fruits[i].style.width = '100px';
             fruits[2].style.backgroundColor = 'orange';
             fruits[3].style.backgroundColor = 'lightGreen';
             fruits[5].style.backgroundColor = '#fc5a8d';
         }
+        fruits.forEach((element) => {
+            element.style.border = '1px solid black';
+        })
     </script>
 </body>
 </html>
